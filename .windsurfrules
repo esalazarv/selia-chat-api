@@ -1,0 +1,64 @@
+# Description
+
+This is a NestJS application that provides a chat GraphQL API.
+
+# Project main dependencies
+
+- @nestjs/common
+- @nestjs/core
+- @nestjs/platform-express
+- @nestjs/mongoose
+- @nestjs/graphql
+- @nestjs/apollo
+- @nestjs/config
+- @nestjs/redis
+
+# Directory Structure
+
+```
+src/
+├── config/
+│   ├── app.config.ts
+│   ├── mongo.config.ts
+│   ├── graphql.config.ts
+│   ├── logger.config.ts
+│   ├── redis.config.ts
+│   └── config.module.ts
+├── modules/
+│   ├── chat/
+│   │   ├── dtos/
+│   │   │   ├── incoming-message.dto.ts
+│   │   │   ├── outgoing-message.dto.ts
+│   │   ├── entities/
+│   │   │   ├── chat.entity.ts
+│   │   ├── interfaces/
+│   │   │   ├── chat.interface.ts
+│   │   ├── schemas/
+│   │   │   ├── chat.schema.ts
+│   │   ├── resolvers/
+│   │   │   ├── chat.resolver.ts
+│   │   ├── services/
+│   │   │   ├── chat.service.ts
+│   │   ├── chat.module.ts
+│   │   └── chat.entity.ts
+│   ├── main.ts
+```
+
+
+## Code guidelines
+
+- Use TypeScript for the code
+- Each module has its own directory with the following structure in `src/modules/`
+- Use GraphQL type decorators (code first)
+- Use Mongoose decorators for MongoDB entities
+- Use GraphQL subscriptions for real-time notifications (preferably) (SSE optionally)
+
+
+## References
+
+- [NestJS](https://nestjs.com/)
+- [NestJS GraphQL](https://docs.nestjs.com/graphql)
+- [NestJS GraphQL Subscriptions](https://docs.nestjs.com/graphql/subscriptions)
+- [NestJS Mongoose](https://docs.nestjs.com/mongoose)
+- [NestJS Redis](https://docs.nestjs.com/redis)
+- [NestJS Config](https://docs.nestjs.com/techniques/configuration)
